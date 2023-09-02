@@ -1,0 +1,23 @@
+
+.Container{
+    margin-left:25%;
+    margin-right:25%;
+}
+
+.form-signin{
+    margin-left:10%;
+    margin-right:10%;
+}
+
+
+.student-btn{
+    padding-top: 7%;
+    display: flex;
+    align-content: space-around;
+    justify-content: space-evenly;
+}
+
+.form-control{
+    margin-bottom: 1.5rem;
+}
+

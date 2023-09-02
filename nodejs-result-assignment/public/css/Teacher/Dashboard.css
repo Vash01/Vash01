@@ -1,0 +1,16 @@
+
+
+.add-btn{
+  color:white;
+}
+
+.button{
+  outline: none;
+  display: inline-flex;
+  height: 30px;
+  text-transform: none;
+  padding: 2px;
+  background-color: #343a40;
+  overflow: hidden;
+  border: none;
+}

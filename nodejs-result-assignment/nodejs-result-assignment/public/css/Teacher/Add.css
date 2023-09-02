@@ -1,0 +1,40 @@
+
+.Container{
+    margin-left:25%;
+    margin-right:25%;
+}
+
+.form-signin{
+    margin-left:10%;
+    margin-right:10%;
+}
+#Btn:hover
+{
+    background-color: rgb(11, 134, 95);
+}
+
+#Btn2:hover
+{
+    background-color: rgb(180, 34, 34);
+}
+
+
+.student-btn{
+    padding-top: 7%;
+    display: flex;
+    align-content: space-around;
+    justify-content: space-evenly;
+}
+
+.form-control{
+    margin-bottom: 1.5rem;
+}
+.error
+{
+    margin: 0;
+    padding: 0;
+    font-size: small;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 500;
+    color:red;
+}

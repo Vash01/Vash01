@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link type="text/css" rel="stylesheet" href="/css/Student/Login.css" />
+
+    <%- include('../../partial/head'); %>
+</head>
+
+<body class="container">
+
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-dark">
+            <a class="navbar-brand text-center ">Result Managment System</a>
+            <%- include('../../partial/logout'); %>
+        </nav>
+    </header>
+
+    <main>
+        <div class="jumbotron py-5 vh-100">
+            <div class="Container role-box text-center card bg-dark text-white">
+                <div class="wrapper">
+                    <form action="/Student/Dashboard" method="post" name="Login_Form" class="form-signin">
+                        <h3 class="form-signin-heading text-center">FIND RESULT</h3>
+                        <p class="text-white-50 mb-5 text-center">Please enter your Name and Roll Number!</p>
+
+                        <input type="number" class="form-control" name="Rollno" placeholder="Roll Number" required
+                            autofocus="">
+                        <input type="date" class="form-control" name="DOB" placeholder="Date Of Birth">
+
+                        <div class="student-btn">
+                            <button type="submit" class="btn btn-outline-light btn-lg px-4 mb-4 me-2"
+                                >Search</button>
+                            <button type="reset" class="btn btn-outline-light btn-lg px-4 mb-4 me-2">Clear</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    </div>
+
+    <footer>
+        <%- include('../../partial/footer'); %>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link type="text/css" rel="stylesheet" href="/css/Teacher/Add.css" />
+  <%- include('../../partial/head'); %>
+</head>
+
+<body class="container">
+
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-light bg-dark">
+      <a class="navbar-brand text-center ">Result Managment System</a>
+      <%- include('../../partial/logout'); %>
+    </nav>
+  </header>
+  <main>
+
+    <div class="jumbotron py-5 h-100">
+      <div class=" text-center ">
+        <div class="row justify-content-start">
+          <div class="col-4 ">
+            <button type="button" class="btn-lg px-5 mb-4 me-2 bg-dark add-btn"
+              onclick="window.location.href='/Teacher/Dashboard'">Back
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="Container role-box text-center card bg-dark text-white">
+        <div class="wrapper">
+          <form action="/Teacher/Add" method="post" class="form-signin">
+            <h3 class="form-signin-heading text-center">Add Record</h3>
+            <p class="text-white-50 mb-5 text-center">Please enter your details!</p>
+            <div class="student-name">
+              <input type="text" class="form-control " name="Name" placeholder="Enter Name" autofocus="">
+              <p class="error">
+                <% for (let i = 0; i < error.length; i++) { %>
+                  <% if (
+                    error[i].msg === 'Name is required' ||
+                    error[i].msg === 'this field is required'
+                  ) { %>
+                    <%= error[0].msg %>
+                  <% } %>
+                <% } %>
+              </p>
+            </div>
+            <div class="student-rollNumber">
+              <input type="number" class="form-control " name="Rollno" placeholder="Roll Number" required>
+
+              <p class="error">
+                <% for (let j = 0; j < error.length; j++) { %>
+                  <% if (
+                    error[j].msg === 'Roll Number is required' ||
+                    error[j].msg === 'this field is required' ||
+                    error[j].msg === 'this Roll No is already present'
+                  ) { %>
+                    <%= error[1].msg %>
+                  <% } %>
+                <% } %> 
+              </p>
+            </div>
+            <div class="student-DOB">
+              <input type="date" class="form-control " name="DOB" placeholder="Date Of Birth" required>
+              <p class="error">
+                <% for (let k= 0; k < error.length; k++) { %>
+                  <% if (
+                    error[k].msg === 'Date Of Birth is required' ||
+                    error[k].msg === 'this field is required'
+                  ) { %>
+                    <%= error[2].msg %>
+                  <% } %>
+                <% } %>
+              </p> 
+            </div>
+            <div class="student-score">
+              <input type="number" class="form-control " name="Score" placeholder="Score" required>
+              <p class="error">
+                <% for (let l = 0; l < error.length; l++) { %>
+                  <% if (
+                    error[l].msg === 'Score is required' ||
+                    error[l].msg === 'this field is required'
+                  ) { %>
+                    <%= error[3].msg %>
+                  <% } %>
+                <% } %>
+              </p> 
+            </div>
+            <div class="student-btn">
+              <button type="submit" class="btn btn-outline-light btn-lg px-4 mb-4 me-2 " id="Btn">Submit</button>
+              <button type="reset" class="btn btn-outline-light btn-lg px-4 mb-4 me-2 " id="Btn2">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+    </div>
+    </div>
+  </main>
+  <footer>
+    <%- include('../../partial/footer'); %>
+  </footer>
+
+</body>
+
+</html>

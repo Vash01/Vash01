@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link type="text/css" rel="stylesheet" href="/css/Student/Dashboard.css" />
+  <%- include('../../partial/head'); %>
+</head>
+
+<body class="container">
+
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-light bg-dark">
+      <a class="navbar-brand text-center ">Result Managment System</a>
+      <%- include('../../partial/logout'); %>
+    </nav>
+  </header>
+  <main>
+    <div class="jumbotron py-5 vh-100" >
+      <a class="back" href="/Student/Login">Back to home</a>
+
+    <div class="mask d-flex align-items-center h-100">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="text-center">
+              <h2>Result</h2>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-dark table-bordered table-striped mb-0">
+                <tbody >
+                  <tr>
+                    <td>Name:</td>
+                    <td><%= result.Name %></td>
+                  </tr>
+                  <tr>
+                    <td>RolleNumber:</td>
+                    <td> <%= result.Rollno %></td>
+                  </tr>
+                  
+                  <tr>
+                    <td>Date Of Birth:</td>
+                    <td> <%= result.DOB %></td>
+                  </tr>
+                  <tr>
+                    <td>Score:</td>
+                    <td><%= result.Score %></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <%- include('../../partial/footer'); %>
+  </footer>
+</body>
+
+</html>

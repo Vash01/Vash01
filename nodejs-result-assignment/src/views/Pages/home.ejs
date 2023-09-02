@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head >
+  <%- include('../partial/head'); %>
+</head>
+
+<body class="container">
+
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-light bg-dark">
+      <a class="navbar-brand text-center ">Result Managment System</a>
+  </nav>
+  </header>
+
+    <main >
+      
+      <div class="jumbotron py-5 vh-100">
+        
+        <div class="Container role-box text-center card bg-dark text-white">
+          
+          <h3 >Login As</h3>
+          <div class="roles mt-5">
+            <div class="teacher ">
+
+              <div class="teacher-btn col-4">
+                <button onclick="window.location.href='/Teacher/Dashboard'" type="button" class="block">Teacher</button>
+              </div>
+            </div>
+            <div class="student">
+
+              <div class="student-btn">
+                <button  onclick="window.location.href='/Student/Login'" type="button" class="block">Student</button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <%- include('../partial/footer'); %>
+    </footer>
+</body>
+
+</html>
